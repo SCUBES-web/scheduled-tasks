@@ -57,8 +57,8 @@ if today_tuple in birthdays_dict:
 # HINT 2: Remember to call .starttls()
 # HINT 3: Remember to log in to your email service with email/password. Make sure your security setting is set to allow less secure apps.
 # HINT 4: The message should have the Subject: Happy Birthday then after \n\n The Message Body.
-with smtplib.SMTP("smtp.gmail.com") as connection:
-    connection.starttls()
-    connection.login(user=MY_EMAIL, password=MY_PASSWORD)
-    connection.sendmail(from_addr=MY_EMAIL, to_addrs=birthday_person["email"],
-                        msg=f"Subject: Happy Birthday!\n\n{contents}")
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+        connection.sendmail(from_addr=MY_EMAIL, to_addrs=birthday_person["email"],
+                            msg=f"Subject: Happy Birthday!\n\n{contents}")
